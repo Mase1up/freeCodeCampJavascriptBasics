@@ -78,3 +78,28 @@ function cc(card) {
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+// Objects
+
+const myDog = {
+    name: 'Biscuit',
+    legs: 4,
+    tails: 1,
+    friends: ['Ethan', 'Mason', 'Vanessa', 'Oma', 'Opa']
+}
+
+// Using variables to lookup object properties
+// Setup
+
+// This allows you to input a player number, then the player var will become 
+// the result of whatever data is stored in 16, returning "Montana"
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+  };
+  
+  // Only change code below this line
+  const playerNumber = 16;  // Change this line
+  const player = testObj[playerNumber];   // Change this line
+
