@@ -38,13 +38,42 @@ golfScore(5, 4);
 // Then the other thing was I didn't pay attention to the order they wanted, I was creating the final
 // string requested backwards, saying Hold or Bet first, then the count.  Pay attention to that stuff.
 
+// https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/counting-cards
+
 let count = 0;
 
 function cc(card) {
   // Only change code below this line
 
+  const action = ['Hold', 'Bet']
 
-  return "Change Me";
+  switch(card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+        count++;
+        break;
+    case 7:     /* I only added this for reading purposes to explicitly show 7-9 hold the count */
+    case 8:
+    case 9:
+        count = count;
+        break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+        count--;
+        break;
+  }
+
+  if (count <= 0) {
+    return count + " " + action[0];
+  } else {
+    return count + " " + action[1];
+  }
   // Only change code above this line
 }
 
